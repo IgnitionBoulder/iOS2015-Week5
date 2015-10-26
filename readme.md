@@ -35,7 +35,7 @@ Repository for the fifth week of Fall 2015 Spark iOS curriculum and assignments
 
 #### Resources
 - [NSNotification & NSNotification​Center](http://nshipster.com/nsnotification-and-nsnotificationcenter/)
-- 
+- [Fundamentals of NSNotificationCenter in Swift](https://www.andrewcbancroft.com/2014/10/08/fundamentals-of-nsnotificationcenter-in-swift/)
 
 
 
