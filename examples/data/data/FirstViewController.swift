@@ -8,13 +8,17 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, Monkey {
+class FirstViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showImage:", name: "imageLoaded", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "backgrounding", name:
+            UIApplicationDidEnterBackgroundNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,8 +26,14 @@ class FirstViewController: UIViewController, Monkey {
         // Dispose of any resources that can be recreated.
     }
 
-    func imageLoaded(image: UIImage) {
-        imageView.image = image
+    func backgrounding() {
+        print("Going into background")
+    }
+
+    func showImage(notification: NSNotification) {
+        if let image = notification.userInfo?["image"] as? UIImage {
+            imageView.image = image
+        }
     }
 
     // MARK: - Navigation
@@ -33,7 +43,7 @@ class FirstViewController: UIViewController, Monkey {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let second = segue.destinationViewController as? SecondViewController {
-            second.delegate = self
+            
         }
     }
 

@@ -8,13 +8,7 @@
 
 import UIKit
 
-protocol Monkey {
-    func imageLoaded(image: UIImage)
-}
-
 class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-    var delegate: protocol<Monkey>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,12 +47,12 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
     // MARK: - UIImagePickerControllerDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-            if let delegate = delegate {
-                delegate.imageLoaded(image)
-            }
+            NSNotificationCenter.defaultCenter().postNotificationName("imageLoaded", object: self, userInfo: ["image": image])
         }
 
-        dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(false) { () -> Void in
+            print("Hello")
+        }
         navigationController?.popViewControllerAnimated(false)
     }
 }
