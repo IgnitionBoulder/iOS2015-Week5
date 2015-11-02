@@ -12,8 +12,9 @@
 		020198EA1BDEFE19009EDC0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020198E81BDEFE19009EDC0F /* Main.storyboard */; };
 		020198EC1BDEFE19009EDC0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020198EB1BDEFE19009EDC0F /* Assets.xcassets */; };
 		020198EF1BDEFE19009EDC0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020198ED1BDEFE19009EDC0F /* LaunchScreen.storyboard */; };
-		020198F81BDEFEAB009EDC0F /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020198F61BDEFEAB009EDC0F /* ListItem.swift */; settings = {ASSET_TAGS = (); }; };
-		020198F91BDEFEAB009EDC0F /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020198F71BDEFEAB009EDC0F /* ShoppingList.swift */; settings = {ASSET_TAGS = (); }; };
+		020198F81BDEFEAB009EDC0F /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020198F61BDEFEAB009EDC0F /* ListItem.swift */; };
+		020198F91BDEFEAB009EDC0F /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020198F71BDEFEAB009EDC0F /* ShoppingList.swift */; };
+		CEF48DFD1BE737B30014057B /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF48DFC1BE737B30014057B /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		020198F01BDEFE19009EDC0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		020198F61BDEFEAB009EDC0F /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		020198F71BDEFEAB009EDC0F /* ShoppingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		CEF48DFC1BE737B30014057B /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = ../CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		020198E31BDEFE19009EDC0F /* week5 */ = {
 			isa = PBXGroup;
 			children = (
+				CEF48DFC1BE737B30014057B /* CategoryViewController.swift */,
 				020198E41BDEFE19009EDC0F /* AppDelegate.swift */,
 				020198F61BDEFEAB009EDC0F /* ListItem.swift */,
 				020198F71BDEFEAB009EDC0F /* ShoppingList.swift */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF48DFD1BE737B30014057B /* CategoryViewController.swift in Sources */,
 				020198F81BDEFEAB009EDC0F /* ListItem.swift in Sources */,
 				020198F91BDEFEAB009EDC0F /* ShoppingList.swift in Sources */,
 				020198E71BDEFE19009EDC0F /* ViewController.swift in Sources */,
