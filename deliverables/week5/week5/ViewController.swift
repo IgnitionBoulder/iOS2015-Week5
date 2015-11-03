@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         shoppingList.addItem(ListItem(name: "bread", quantity: 3), category: "Grocery")
         shoppingList.addItem(ListItem(name: "broom", quantity: 1), category: "Household")
     }
+    
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return shoppingList.sortedCategories().count
