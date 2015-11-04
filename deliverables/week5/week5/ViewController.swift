@@ -126,6 +126,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
             //tableView.insertSections(shoppingList.sortedCategories(), withRowAnimation: .Bottom)
                // insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            //couldn't quite get it to work
         }
     }
  

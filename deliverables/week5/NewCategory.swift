@@ -47,7 +47,7 @@ class NewCategory: UIViewController, UITextFieldDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if addCategoryButton === sender {
-            newCategory = newCategoryTextField.text ?? ""
+            newCategory = newCategoryTextField.text ?? "" //this is nifty, but i don't totally understand it
         }
         
         // Get the new view controller using segue.destinationViewController.
