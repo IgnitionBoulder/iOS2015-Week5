@@ -12,8 +12,12 @@
 		020198EA1BDEFE19009EDC0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020198E81BDEFE19009EDC0F /* Main.storyboard */; };
 		020198EC1BDEFE19009EDC0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020198EB1BDEFE19009EDC0F /* Assets.xcassets */; };
 		020198EF1BDEFE19009EDC0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020198ED1BDEFE19009EDC0F /* LaunchScreen.storyboard */; };
-		020198F81BDEFEAB009EDC0F /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020198F61BDEFEAB009EDC0F /* ListItem.swift */; settings = {ASSET_TAGS = (); }; };
-		020198F91BDEFEAB009EDC0F /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020198F71BDEFEAB009EDC0F /* ShoppingList.swift */; settings = {ASSET_TAGS = (); }; };
+		020198F81BDEFEAB009EDC0F /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020198F61BDEFEAB009EDC0F /* ListItem.swift */; };
+		020198F91BDEFEAB009EDC0F /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020198F71BDEFEAB009EDC0F /* ShoppingList.swift */; };
+		5C59F8A31BE9203A0096DC07 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C59F8A21BE9203A0096DC07 /* TableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5C59F8A51BE9640F0096DC07 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C59F8A41BE9640F0096DC07 /* AlertViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5C922E351BE5925900F277B9 /* selectCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C922E341BE5925900F277B9 /* selectCategory.swift */; settings = {ASSET_TAGS = (); }; };
+		5C922E371BE592D600F277B9 /* selectItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C922E361BE592D600F277B9 /* selectItem.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		020198F01BDEFE19009EDC0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		020198F61BDEFEAB009EDC0F /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		020198F71BDEFEAB009EDC0F /* ShoppingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		5C59F8A21BE9203A0096DC07 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		5C59F8A41BE9640F0096DC07 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		5C922E341BE5925900F277B9 /* selectCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectCategory.swift; sourceTree = "<group>"; };
+		5C922E361BE592D600F277B9 /* selectItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +70,11 @@
 				020198F61BDEFEAB009EDC0F /* ListItem.swift */,
 				020198F71BDEFEAB009EDC0F /* ShoppingList.swift */,
 				020198E61BDEFE19009EDC0F /* ViewController.swift */,
+				5C59F8A41BE9640F0096DC07 /* AlertViewController.swift */,
+				5C922E341BE5925900F277B9 /* selectCategory.swift */,
+				5C922E361BE592D600F277B9 /* selectItem.swift */,
 				020198E81BDEFE19009EDC0F /* Main.storyboard */,
+				5C59F8A21BE9203A0096DC07 /* TableViewController.swift */,
 				020198EB1BDEFE19009EDC0F /* Assets.xcassets */,
 				020198ED1BDEFE19009EDC0F /* LaunchScreen.storyboard */,
 				020198F01BDEFE19009EDC0F /* Info.plist */,
@@ -96,6 +108,7 @@
 		020198D91BDEFE19009EDC0F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Spark Boulder";
 				TargetAttributes = {
@@ -141,6 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				020198F81BDEFEAB009EDC0F /* ListItem.swift in Sources */,
+				5C59F8A31BE9203A0096DC07 /* TableViewController.swift in Sources */,
+				5C922E351BE5925900F277B9 /* selectCategory.swift in Sources */,
+				5C59F8A51BE9640F0096DC07 /* AlertViewController.swift in Sources */,
+				5C922E371BE592D600F277B9 /* selectItem.swift in Sources */,
 				020198F91BDEFEAB009EDC0F /* ShoppingList.swift in Sources */,
 				020198E71BDEFE19009EDC0F /* ViewController.swift in Sources */,
 				020198E51BDEFE19009EDC0F /* AppDelegate.swift in Sources */,
