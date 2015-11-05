@@ -9,8 +9,11 @@
 import UIKit
 
 class NewItem: UIViewController, UIPickerViewDelegate, UITextFieldDelegate {
+    
     @IBOutlet weak var itemNameTextField: UITextField!
     @IBOutlet weak var itemQuantityTextField: UITextField!
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     var delegate : NewItemDelegate? = nil
     
@@ -19,13 +22,22 @@ class NewItem: UIViewController, UIPickerViewDelegate, UITextFieldDelegate {
     @IBOutlet weak var categoryPickerView: UIPickerView!
     
     @IBAction func finishAddingItem(sender: AnyObject) {
-        if let nameOfItem = itemNameTextField.text {
-            if let quantityOfItem = itemQuantityTextField.text {
-                let itemCategory = categoryPickerView.selectedRowInComponent(0).description
-                delegate!.doneAddingItem(nameOfItem, quantityOfItem: Int(quantityOfItem)!, itemCategory: itemCategory, controller: self)
+        if itemNameTextField.text == "" {
+            nameLabel.text = "Please add a name"
+        } else {
+            if itemQuantityTextField.text == ""   {
+                quantityLabel.text = "Please add a quantity"
+            } else {
+                if let nameOfItem = itemNameTextField.text {
+                        if let quantityOfItem = itemQuantityTextField.text {
+                            let itemCategory = categoryPickerView.selectedRowInComponent(0).description
+                            delegate!.doneAddingItem(nameOfItem, quantityOfItem: Int(quantityOfItem), itemCategory: itemCategory, controller: self)
+                    }
+                }
             }
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

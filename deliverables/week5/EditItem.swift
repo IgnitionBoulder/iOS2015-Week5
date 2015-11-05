@@ -9,13 +9,13 @@
 import UIKit
 
 
-class EditItem: UIViewController, UIPickerViewDelegate {
+class EditItem: UIViewController, UIPickerViewDelegate, UITextFieldDelegate {
     
     var delegate : EditItemDelegate? = nil
     
     
     var itemNameLabelText : String!
-    var itemQuantityLabelText : String!
+    var itemQuantityLabelText : Int!
     var itemCategoryLabelText : String!
     var categories : [String]!
     var chosenCategory: String!
@@ -42,11 +42,17 @@ class EditItem: UIViewController, UIPickerViewDelegate {
         categoryPicker.hidden = false
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        itemNameTextField.resignFirstResponder()
+        itemQuantityTextField.resignFirstResponder()
+        return false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         itemNameLabel.text = itemNameLabelText
-        itemQuantityLabel.text = itemQuantityLabelText
+        itemQuantityLabel.text = "Quantity is \(itemQuantityLabelText)"
         itemCategoryLabel.text = itemCategoryLabelText
 
         // Do any additional setup after loading the view.
@@ -69,15 +75,33 @@ class EditItem: UIViewController, UIPickerViewDelegate {
 
     @IBAction func done(sender: AnyObject) {
         chosenCategory = categoryPicker.selectedRowInComponent(0).description
-        //editedItem = ListItem(name: itemNameTextField.text!,quantity: Int(itemQuantityTextField.text!)!)
-        if let newName = editedItemName {
-            if let newQuantity = editedItemQuantity {
-                delegate!.doneEditing(chosenCategory, editedItemName: newName, editedItemQuantity: newQuantity, controller: self)
+        if var newName = itemNameTextField.text {
+            if itemNameTextField.text == "" {
+                newName = itemNameLabelText
+            }
+            
+            var bestQuantity : Int?
+            if var newQuantity = itemQuantityTextField.text {
+                if itemQuantityTextField.text != "" {
+                    bestQuantity = Int(newQuantity)
+                } else if itemQuantityTextField.text! == "" {
+                    bestQuantity = itemQuantityLabelText
+                }
+                if bestQuantity == nil {
+                    itemQuantityLabel.text = "Please enter a valid quantity "
+                    itemQuantityTextField.hidden = true
+                } else {
+                delegate!.doneEditing(itemNameLabelText, originalCategory: itemCategoryLabelText, chosenCategory: chosenCategory, editedItemName: newName,editedItemQuantity: bestQuantity!, controller: self)
+                     self.navigationController?.popViewControllerAnimated(true)
+                }
             }
         }
-        self.navigationController?.popViewControllerAnimated(true)
     }
-    
+
+}
+
+
+
     /*
     // MARK: - Navigation//
 
@@ -88,4 +112,4 @@ class EditItem: UIViewController, UIPickerViewDelegate {
     }
     */
 
-}
+

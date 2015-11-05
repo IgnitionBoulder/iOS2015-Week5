@@ -9,6 +9,6 @@
 import Foundation
 
 struct ListItem {
-    let name: String
+    var name: String //is this cheating?
     var quantity: Int
 }

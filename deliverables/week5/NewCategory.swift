@@ -10,6 +10,7 @@ import UIKit
 
 
 class NewCategory: UIViewController, UITextFieldDelegate{
+
     
     
     var newCategory: String?
