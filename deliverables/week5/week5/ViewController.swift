@@ -11,12 +11,17 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var shoppingList = ShoppingList()
+    
+    var category: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         shoppingList.addItem(ListItem(name: "milk", quantity: 2), category: "Grocery")
         shoppingList.addItem(ListItem(name: "bread", quantity: 3), category: "Grocery")
         shoppingList.addItem(ListItem(name: "broom", quantity: 1), category: "Household")
+        if (category != nil) {
+            shoppingList.addCategory(category!)
+        }
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -45,4 +50,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
+
 }
