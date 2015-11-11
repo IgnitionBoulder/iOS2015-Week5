@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -17,8 +18,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         shoppingList.addItem(ListItem(name: "milk", quantity: 2), category: "Grocery")
         shoppingList.addItem(ListItem(name: "bread", quantity: 3), category: "Grocery")
         shoppingList.addItem(ListItem(name: "broom", quantity: 1), category: "Household")
+}
+
+    @IBAction func editList(sender: AnyObject) {
+        let alertController: UIAlertController = UIAlertController(title: "Edit List", message: "What would you like to edit?", preferredStyle: .Alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+        }
+        alertController.addAction(cancelAction)
+        
+        let itemAction = UIAlertAction(title: "Edit Items", style: .Default) { (action) in
+            self.performSegueWithIdentifier("toEdit", sender: self)
+        }
+        alertController.addAction(itemAction)
+        
+        let categoryAction = UIAlertAction(title: "Add a Category", style: .Default) { (action) in
+            self.performSegueWithIdentifier("toCategory", sender: self)
+        }
+        alertController.addAction(categoryAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 
+    func userAddedCategory(name: NSString) {
+        shoppingList.addCategory(name as String)
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return shoppingList.sortedCategories().count
     }
@@ -45,4 +70,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
+    
+
 }
