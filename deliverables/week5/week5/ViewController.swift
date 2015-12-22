@@ -11,12 +11,30 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var shoppingList = ShoppingList()
-
+    
+    var category: String?
+    
+    var itemName: String?
+    
+    var quantity: String?
+    
+    var editedCategory: String?
+    
+    var editedName: String?
+    
+    var editedQuantity: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         shoppingList.addItem(ListItem(name: "milk", quantity: 2), category: "Grocery")
         shoppingList.addItem(ListItem(name: "bread", quantity: 3), category: "Grocery")
         shoppingList.addItem(ListItem(name: "broom", quantity: 1), category: "Household")
+        if (category != nil) {
+            shoppingList.addCategory(category!)
+        }
+        if (itemName != nil && quantity != nil) {
+            shoppingList.addItem(ListItem(name: itemName!, quantity: Int(quantity!)!), category: "asdf")
+        }
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -45,4 +63,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationVC = segue.destinationViewController as! EditItemController
+//        destinationVC.nameToEdit = sender.
+//        destinationVC.quantity = quantityField.text!
+//        stopping point here
+    }
+    
 }

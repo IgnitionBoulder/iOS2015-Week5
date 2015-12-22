@@ -14,6 +14,9 @@
 		020198EF1BDEFE19009EDC0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020198ED1BDEFE19009EDC0F /* LaunchScreen.storyboard */; };
 		020198F81BDEFEAB009EDC0F /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020198F61BDEFEAB009EDC0F /* ListItem.swift */; settings = {ASSET_TAGS = (); }; };
 		020198F91BDEFEAB009EDC0F /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020198F71BDEFEAB009EDC0F /* ShoppingList.swift */; settings = {ASSET_TAGS = (); }; };
+		0412F5821BE9A22900DDE878 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412F5811BE9A22900DDE878 /* CategoryController.swift */; settings = {ASSET_TAGS = (); }; };
+		0412F5841BEB22C800DDE878 /* ListItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412F5831BEB22C800DDE878 /* ListItemController.swift */; settings = {ASSET_TAGS = (); }; };
+		0412F5861BEB2FBF00DDE878 /* EditItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412F5851BEB2FBF00DDE878 /* EditItemController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		020198F01BDEFE19009EDC0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		020198F61BDEFEAB009EDC0F /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		020198F71BDEFEAB009EDC0F /* ShoppingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		0412F5811BE9A22900DDE878 /* CategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		0412F5831BEB22C800DDE878 /* ListItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemController.swift; sourceTree = "<group>"; };
+		0412F5851BEB2FBF00DDE878 /* EditItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				020198EB1BDEFE19009EDC0F /* Assets.xcassets */,
 				020198ED1BDEFE19009EDC0F /* LaunchScreen.storyboard */,
 				020198F01BDEFE19009EDC0F /* Info.plist */,
+				0412F5811BE9A22900DDE878 /* CategoryController.swift */,
+				0412F5831BEB22C800DDE878 /* ListItemController.swift */,
+				0412F5851BEB2FBF00DDE878 /* EditItemController.swift */,
 			);
 			path = week5;
 			sourceTree = "<group>";
@@ -141,9 +150,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				020198F81BDEFEAB009EDC0F /* ListItem.swift in Sources */,
+				0412F5821BE9A22900DDE878 /* CategoryController.swift in Sources */,
+				0412F5841BEB22C800DDE878 /* ListItemController.swift in Sources */,
 				020198F91BDEFEAB009EDC0F /* ShoppingList.swift in Sources */,
 				020198E71BDEFE19009EDC0F /* ViewController.swift in Sources */,
 				020198E51BDEFE19009EDC0F /* AppDelegate.swift in Sources */,
+				0412F5861BEB2FBF00DDE878 /* EditItemController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
